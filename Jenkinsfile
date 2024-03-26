@@ -20,11 +20,7 @@ pipeline {
             steps {
                 sh 'py.test --verbose sources/test_calc.py' //3
             }
-            post {
-                always {
-                    junit 'test-reports/results.xml' //4
-                }
-            }
+            
         }
     }
 }
